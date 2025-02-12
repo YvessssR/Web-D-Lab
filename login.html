@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-styles.css">
+    <script src="Login-script.js" defer></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username / E-mail">
+            <div class="password-container">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <span class="toggle-password" onclick="togglePassword('loginPassword')">👁</span>
+            </div>
+            <button onclick="loginUser()">Login</button>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>
