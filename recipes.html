@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recipes - Zesty Beasts</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6b6b;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .nav a, .login a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav a:hover, .login a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        select {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .recipe-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .recipe-guide {
+            text-align: left;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Zesty Beasts</h1>
+        </div>
+        <nav class="nav">
+            <a href="#">About Us</a>
+            <a href="index.html">Home</a>
+            <a href="MealPlan.html">Meal Plan</a>
+            <a href="#">Food Plan</a>
+            <a href="#">Recipes</a>
+        </nav>
+        <nav class="login">
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Select a Recipe</h2>
+        <select id="recipe-dropdown" onchange="showRecipe()">
+            <option value="">-- Choose a Recipe --</option>
+            <option value="steak">Grilled Steak</option>
+            <option value="burger">Classic Burger</option>
+            <option value="bbq">BBQ Ribs</option>
+        </select>
+
+        <img id="recipe-image" class="recipe-image" src="" alt="" style="display: none;">
+        <div id="recipe-guide" class="recipe-guide" style="display: none;"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Zesty Beasts. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showRecipe() {
+            const dropdown = document.getElementById('recipe-dropdown');
+            const selectedRecipe = dropdown.value;
+            const recipeImage = document.getElementById('recipe-image');
+            const recipeGuide = document.getElementById('recipe-guide');
+
+            const recipes = {
+                steak: {
+                    img: 'steak.jpg',
+                    title: 'Grilled Steak Recipe',
+                    ingredients: ['2 Ribeye Steaks', '2 tbsp Olive Oil', 'Salt and pepper to taste', '2 cloves Garlic, minced', 'Fresh Rosemary (optional)'],
+                    instructions: [
+                        'Preheat your grill to high heat.',
+                        'Rub steaks with olive oil, garlic, salt, and pepper.',
+                        'Place steaks on the grill and sear for 4-5 minutes on each side.',
+                        'Add rosemary for flavor if desired.',
+                        'Let rest for 5 minutes before slicing. Serve and enjoy!'
+                    ]
+                },
+                burger: {
+                    img: 'burger.jpg',
+                    title: 'Classic Burger Recipe',
+                    ingredients: ['1 lb Ground Beef', '1 tsp Salt', '1/2 tsp Pepper', '4 Burger Buns', '4 slices Cheese (optional)', 'Lettuce, Tomato, Onion for toppings'],
+                    instructions: [
+                        'Preheat your grill or skillet over medium-high heat.',
+                        'Form ground beef into patties and season with salt and pepper.',
+                        'Cook patties for about 4-5 minutes on each side, adding cheese in the last minute.',
+                        'Toast burger buns on the grill if desired.',
+                        'Assemble with toppings and enjoy!'
+                    ]
+                },
+                bbq: {
+                    img: 'bbqribs.jpg',
+                    title: 'BBQ Ribs Recipe',
+                    ingredients: ['2 lbs Pork Ribs', '1 cup BBQ Sauce', '2 tbsp Brown Sugar', '1 tbsp Paprika', 'Salt and pepper to taste'],
+                    instructions: [
+                        'Preheat your oven to 300°F (150°C).',
+                        'Rub ribs with brown sugar, paprika, salt, and pepper.',
+                        'Wrap in foil and bake for 2.5 hours.',
+                        'Remove from foil, brush with BBQ sauce, and grill for an additional 10-15 minutes.',
+                        'Serve hot and enjoy!'
+                    ]
+                }
+            };
+
+            if (selectedRecipe && recipes[selectedRecipe]) {
+                const recipe = recipes[selectedRecipe];
+
+                recipeImage.src = recipe.img;
+                recipeImage.style.display = 'block';
+
+                recipeGuide.innerHTML = `
+                    <h3>${recipe.title}</h3>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>${recipe.ingredients.map(item => `<li>${item}</li>`).join('')}</ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>${recipe.instructions.map(step => `<li>${step}</li>`).join('')}</ol>
+                `;
+                recipeGuide.style.display = 'block';
+            } else {
+                recipeImage.style.display = 'none';
+                recipeGuide.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
