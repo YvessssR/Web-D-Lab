@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+ 
+ 
+  header {
+    background: linear-gradient(135deg, #ea00a0, #ecabcc);
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+  }
+  
+  .header {
+    background: linear-gradient(135deg, #ea00a0, #ecabcc);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.nav, .login {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a, .login a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.food-meals {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps the meals centered */
+    padding: 20px;
+    width: 100%;
+}
+
+
+.food-meals-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.food-meal {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: white;
+    overflow: hidden;
+}
+
+.food-meal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.food-meal img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.food-meal:hover img {
+    transform: scale(1.1);
+}
+
+.food-meal h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.food-meal p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+.meal-filter {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px;
+    width: 100%; /* Ensures it spans full width */
+    max-width: 1000px; /* Keeps it aligned with meals */
+    padding-left: 20px; /* Adjusts left padding */
+    margin-bottom: 20px;
+}
+
+
+
+.food-meal {
+    display: block;
+}
+
+/* Ensure the first section takes up the full screen height */
+.food-news {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f5f5f5;
+    padding: 0 10%;
+}
+
+/* Container to hold image and text side by side */
+.news-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left Side - Image */
+.news-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Side - Text */
+.news-text {
+    max-width: 600px;
+}
+
+.news-text h2 {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+
+.news-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Read More Button */
+.read-more {
+    margin-top: 15px;
+    background-color: #ea00a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: #c00088;
+}
+
+
+/* Footer (Optional for a cleaner look) */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #777;
+    font-size: 14px;
+}
