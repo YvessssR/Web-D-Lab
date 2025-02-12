@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zesty Beasts</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
+
     <header class="header">
         <div class="logo">
             <h1>Zesty Beasts</h1>
@@ -21,7 +22,37 @@
         </nav>
         <nav class="login">
             <a href="login.html">Login</a>
-
         </nav>
     </header>
+
+    <!-- Food Fact Section -->
+    <section class="food-fact">
+        <img src="avocado.jpg" alt="Food Image" class="food-image">
+        <div class="food-text">
+            <h2>Food Fact for the Day:</h2>
+            <p>Did you know that avocados are berries, but strawberries are not?</p>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="carousel">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <img src="burger.jpg" alt="Image 1" class="carousel-image">
+                <img src="steak.jpg" alt="Image 2" class="carousel-image active">
+                <img src="pechay.png" alt="Image 3" class="carousel-image">
+            </div>
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
 </body>
+<center>
+<footer>
+    <div class="footer">
+        <p>&copy; 2025 Zesty Beasts</p>
+    </div>
+</footer>
+</center>
+</html>
