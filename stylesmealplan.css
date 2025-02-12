@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 500px; /* adjust the height here */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    display: block;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #ea00a0, #ecabcc);
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+  }
+  
+  .header {
+    background: linear-gradient(135deg, #ea00a0, #ecabcc);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.nav, .login {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a, .login a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.food-meals {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps the meals centered */
+    padding: 20px;
+    width: 100%;
+}
+
+
+.food-meals-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.food-meal {
+    margin: 20px;
+    width: 300px;
+    height: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: white;
+    overflow: hidden;
+}
+
+.food-meal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.food-meal img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.food-meal:hover img {
+    transform: scale(1.1);
+}
+
+.food-meal h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.food-meal p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+.meal-filter {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px;
+    width: 100%; /* Ensures it spans full width */
+    max-width: 1000px; /* Keeps it aligned with meals */
+    padding-left: 20px; /* Adjusts left padding */
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #ea00a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.filter-btn:hover {
+    background-color: #c00088;
+}
+
+/* Highlight the active button */
+.filter-btn.active {
+    background-color: #c00088; /* Darker shade for selected button */
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(192, 0, 136, 0.6);
+}
+
+.food-meal {
+    display: block;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zesty Beasts</title>
+    <link rel="stylesheet" href="stylesmealplan.css">
+    <script src="mealplan.js"></script>
+</head>
+<body>
+
+<!--Nav bar-->
+    <header class="header">
+        <div class="logo">
+            <h1>Zesty Beasts</h1>
+        </div>
+        <nav class="nav">
+            <a href="#">About us</a>
+            <a href="index.html">Home</a>
+            <a href="#">Meal Plan</a>
+            <a href="#">Food Plan</a>
+            <a href="#">Recipes</a>
+        </nav>
+        <nav class="login">
+            <a href="login.html">Login</a>
+
+        </nav>
+    </header>
+<!--Nav bar-->
+
+
+
+
+<!-- Body -->
+<h1 style="font-size: 48px; text-align: center; margin-top: 5vh; font-family: 'Times New Roman', Times, serif;">Best Seller</h1>
+<!--carousel Image-->
+<div class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://wallpapers.com/images/hd/chicken-food-recipe-hd-w1rl4jjt8bv7xzmg.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://wallpapers.com/images/hd/chicken-food-recipe-hd-w1rl4jjt8bv7xzmg.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://wallpapers.com/images/hd/chicken-food-recipe-hd-w1rl4jjt8bv7xzmg.jpg" alt="Image 3">
+        </div>
+    </div>
+    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+
+<!-- Food Meals Section -->
+
+
+<!-- Food Meals Section -->
+<div class="food-meals">
+    <h2>Our Best Meals</h2>
+<!-- Filter Buttons -->
+<div class="meal-filter">
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+    <button class="filter-btn" data-filter="lunch">Lunch</button>
+    <button class="filter-btn" data-filter="dinner">Dinner</button>
+</div>
+    <div class="food-meals-grid">
+        <div class="food-meal" data-category="breakfast">
+            <img src="https://wallpapers.com/images/hd/chicken-food-recipe-hd-w1rl4jjt8bv7xzmg.jpg" alt="Breakfast Meal">
+            <h3>Breakfast 1</h3>
+            <p>A delicious breakfast meal</p>
+        </div>
+        <div class="food-meal" data-category="lunch">
+            <img src="https://wallpapers.com/images/hd/chicken-food-recipe-hd-w1rl4jjt8bv7xzmg.jpg" alt="Lunch Meal">
+            <h3>Lunch 1</h3>
+            <p>A tasty lunch meal</p>
+        </div>
+        <div class="food-meal" data-category="dinner">
+            <img src="https://wallpapers.com/images/hd/chicken-food-recipe-hd-w1rl4jjt8bv7xzmg.jpg" alt="Dinner Meal">
+            <h3>Dinner 1</h3>
+            <p>A mouthwatering dinner</p>
+        </div>
+        <div class="food-meal" data-category="breakfast">
+            <img src="https://wallpapers.com/images/hd/chicken-food-recipe-hd-w1rl4jjt8bv7xzmg.jpg" alt="Breakfast Meal">
+            <h3>Breakfast 2</h3>
+            <p>Another great breakfast option</p>
+        </div>
+        <!-- Add more meals here with appropriate categories -->
+    </div>
+</div>
+
+
+
+</body>
