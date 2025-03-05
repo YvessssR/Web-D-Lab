@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+#game-container {
+    background-color: #34495e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.class-select, #restart-btn, #choice-container button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Ensure buttons have proper width */
+    display: inline-block; /* Ensure proper display */
+}
+
+.class-select:hover, #restart-btn:hover, #choice-container button:hover {
+    background-color: #2980b9;
+}
+
+.hidden {
+    display: none !important; /* Ensure hidden works consistently */
+}
+
+#game-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin: 20px 0;
+}
+
+#choice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#choice-container button {
+    width: 100%; /* Full width within the container */
+    max-width: 300px; /* Limit maximum width */
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#choice-container button:hover {
+    background-color: #27ae60;
+}
+
+#home-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+#home-btn:hover {
+    background-color: #c0392b;
+}

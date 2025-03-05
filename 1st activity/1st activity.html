@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Activity 1</h2>
+Enter text: 
+<input type="text" id="text1" name="textbox1">
+<br>
+<input type="button" name="clickbtn" value="Display Result" onclick="test1()">
+<p id="demo">Result</p>
+
+<br><br>
+
+<h2>Activity 2</h2>
+Enter First Value: 
+<input type="text" id="text2" name="textbox1">
+<br>
+Enter Second Value: 
+<input type="text" id="text3" name="textbox2">
+<br>
+<input type="button" name="clickbtn1" value="+" onclick="test2(this.id)" id="1">
+<input type="button" name="clickbtn2" value="-" onclick="test2(this.id)" id="2">
+<input type="button" name="clickbtn3" value="/" onclick="test2(this.id)" id="3">
+<input type="button" name="clickbtn4" value="X" onclick="test2(this.id)" id="4">
+<p id="result">Result</p>
+
+<br>
+<br>
+<h2>Activity 3</h2>
+Enter text: 
+<input type="text" id="text4" name="textbox1">
+<br>
+<input type="button" name="clickbtn" value="Display Result" onclick="test3()">
+<pre id="result10">Result</pre>
+
+<!-- JAVA SCRIPT CODE -->
+<script>
+    //function para sa activity 1
+function test1() {
+    var text = document.getElementById("text1").value;
+    document.getElementById("demo").innerHTML = "Result: " = text; 
+}
+
+//function para sa activity 2
+function test2(buttonId) {
+    let num1 = parseFloat(document.getElementById("text2").value); 
+    let num2 = parseFloat(document.getElementById("text3").value);
+    let r;
+
+    switch (parseInt(buttonId)) {  
+        case 1:
+            r = num1 + num2;
+            break;
+        case 2:
+            r = num1 - num2;
+            break;
+        case 3:
+            r = num2 !== 0 ? num1 / num2 : "Cannot divide by zero"; 
+            break;
+        case 4:
+            r = num1 * num2;
+            break;
+        default:
+            r = "Invalid operation";
+    }
+
+    document.getElementById("result").innerHTML = "Result: " + r; 
+}
+
+
+
+//function para sa activity 3
+function test3(){
+    let n = parseInt(document.getElementById("text4").value);
+    let result = "";
+
+    
+    if (isNaN(n) || n < 1 || n % 2 === 0) { 
+        document.getElementById("result10").innerText = "Please enter a valid positive odd number.";
+        return;
+    }
+
+    let mid = Math.floor(n / 2) + 1; 
+
+    
+    for (let i = 1; i <= mid; i++) {
+        let spaces = " ".repeat(mid - i); 
+        let stars = "*".repeat(i * 2 - 1);
+        result += spaces + stars + "\n";
+    }
+
+    
+    for (let i = mid - 1; i >= 1; i--) {
+        let spaces = " ".repeat(mid - i);
+        let stars = "*".repeat(i * 2 - 1);
+        result += spaces + stars + "\n";
+    }
+
+    document.getElementById("result10").innerText = result;
+}
+
+
+</script>
+
+</body>
+</html>

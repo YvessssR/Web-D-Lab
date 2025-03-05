@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Adventure Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>Legendary Quest</h1>
+            <p>Choose your path and become a legend!</p>
+            <div id="class-selection">
+                <button id="warrior-btn" class="class-select">Warrior</button>
+                <button id="mage-btn" class="class-select">Mage</button>
+                <button id="healer-btn" class="class-select">Healer</button>
+                <button id="archer-btn" class="class-select">Archer</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="hidden">
+            <div id="story-display">
+                <p id="story-text">Your adventure begins...</p>
+                
+            </div>
+            <div id="choice-container">
+                <!-- Choices will be dynamically added here -->
+            </div>
+            <div id="game-image-container">
+                <img id="game-image" src="" alt="Scene Image">
+            </div>
+            <button id="home-btn">Back to Home</button>
+
+        </div>
+
+        <div id="game-over-screen" class="hidden">
+            <h2 id="game-over-title">Game Over</h2>
+            <p id="game-over-message"></p>
+            <button id="restart-btn">Restart Adventure</button>
+        </div>
+    </div>
+
+    <script>
+        // Inline script to ensure DOM is loaded and event listeners are attached
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded');
+            
+            // Attach event listeners directly in this script
+            const classButtons = document.querySelectorAll('.class-select');
+            console.log(Found ${classButtons.length} class buttons);
+            
+            classButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    console.log(Clicked button: ${event.target.textContent});
+                    
+                    // Basic class extraction
+                    const playerClass = event.target.id.split('-')[0];
+                    console.log(Selected class: ${playerClass});
+                    
+                    // Hide start screen
+                    document.getElementById('start-screen').classList.add('hidden');
+                    document.getElementById('game-screen').classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+    <script src="game.js"></script>
+</body>
+</html>
